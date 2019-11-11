@@ -5,6 +5,14 @@ defmodule Mnesiac do
   require Logger
 
   @typedoc """
+  Default configuration expected to be passed in to Mnesiac. `store_load_timeout` is optional.
+  """
+  @type config ::
+          {:schema, Mnesiac.Store.config()}
+          | {:stores, [Mnesiac.Store.config(), ...]}
+          | {:store_load_timeout, integer()}
+
+  @typedoc """
   Default arguments expected to be passed in to Mnesiac. `override` is optional.
   """
   @type arg ::
@@ -16,14 +24,6 @@ defmodule Mnesiac do
   Default implementation of arguments expected to be passed in to Mnesiac.
   """
   @type init_arg :: [arg]
-
-  @typedoc """
-  Default configuration expected to be passed in to Mnesiac. `store_load_timeout` is optional.
-  """
-  @type config ::
-          {:schema, Mnesiac.Store.config()}
-          | {:stores, [Mnesiac.Store.config(), ...]}
-          | {:store_load_timeout, integer()}
 
   @typedoc """
   Defines the configuration for mnesiac.

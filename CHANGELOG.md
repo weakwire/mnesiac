@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `resolve_conflict/1` -> `resolve_conflict/2`, now accepts configuration.
 - Standardized terminology in library.
+- Bumped OTP version.
+- Bumped Elixir version.
+- Updated dependencies.
 
 ### Fixed
 - More docs cleanup.
